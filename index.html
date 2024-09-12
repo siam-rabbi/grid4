@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: grid;
+           height: 100vh;
+           grid-template-rows: min-content auto min-content;
+grid-template-areas: 
+       'h'
+       'm'
+       'm'
+       'm'
+       'f' ;
+        }
+        header{
+            height: 100%;
+            width: 100%;
+            background-color: lightblue;
+            grid-area: h;
+
+        }
+        main{
+            display: grid;
+            height: 100%;
+            width: 100%;
+            grid-area: m;
+
+        }
+        article{
+display: grid;
+grid-template-areas: 
+'s1 a1'
+'s2 a2'
+'s3 .'
+
+
+;
+        }
+        section{
+border: solid;
+background-color: blueviolet;
+
+        }
+        aside{
+border: solid;
+background-color: coral;
+        }
+        footer{
+            height: 100%;
+            width: 100%;
+            background-color: orangered;
+            grid-area: f;
+            grid-template-areas: 
+            'n1 n2'
+            ;
+        }
+        #sec1{grid-area: s1;}
+        #sec2{grid-area: s2;}
+        #sec3{grid-area: s3;}
+        #aside1{grid-area: a1;}
+        #aside2{grid-area: a2;}
+        #nav1{grid-area: n1;}
+        #nav2{grid-area: n2;}
+    </style>
+</head>
+<body>
+    <header>
+        <nav> header nav</nav>
+    </header>
+  <main>
+    <article>
+        <section id="sec1">section1</section>
+        <section id="sec2">section1</section>
+        <section id="sec3">section1</section>
+        <aside id="aside1">aside1</aside>
+        <aside id="aside2">aside2</aside>
+       </article>
+  </main>
+  <footer>
+    <nav id="nav1">nav1</nav>
+    <nav id="nav1">nav1</nav>
+  </footer>
+
+</body>
+</html>
